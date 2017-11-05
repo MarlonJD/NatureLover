@@ -6,31 +6,35 @@ class MainModel extends CI_Model
          parent::__construct();
          $this->load->database();//database bağlantısı yapıyoruz.
      }
-    function hepsini_al()
-     {
-         $at = $this->db->get('kisiler');
+    
+    function getUserData($userid)
+    {
+         $at = $this->db->get_where('people', array('userid'=>$userid));
          return $at->result();
-     }
+    }
+    function isThereProfile($userid)
+    {
+        $at = $this->db->get_where('people', array('userid'=>$userid));
+        return $at->num_rows();  
+    }
 
-    function sadece_birini_al($id)
-     {
-         $at = $this->db->get_where('kisiler', array('id'=>$id));
-         return $at->result();
-     }
-
-    function veri_ekleme_fonksiyonu()
+    function create_profile() //Camper Profile Creator
     {
         $data = array(
-       'isim'=>$this->input->post('isim_input'),
-       'soyisim'=>$this->input->post('soyisim_input')
+       'userid'=>$this->input->post('userid_input'),
+       'name'=>$this->input->post('name_input'),
+       'surName'=>$this->input->post('surName_input'),
+       'gender'=>$this->input->post('gender_input'),
+       'paranoid'=>$this->input->post('paranoid_input'),
+       'citizen'=>$this->input->post('citizen_input'),
+       'camperLevel'=>$this->input->post('camperLevel_input'),
+       'isStudent'=>$this->input->post('isStudent_input'),
+       'uniDep'=>$this->input->post('uniDep_input'),
+       'ref'=>$this->input->post('ref_input'),
+       'phone'=>$this->input->post('phone_input')
         );
-        $this->db->insert('kisiler',$data);
+        $this->db->insert('people',$data);
     }
-
-    function veri_silme_fonksiyonu($id)
-    {
-        $query = "DELETE FROM kisiler WHERE id = $id";
-        $result = $this->db->query($query);				
-    }
+    
 }
 ?>
