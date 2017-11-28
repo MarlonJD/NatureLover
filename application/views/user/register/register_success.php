@@ -3,9 +3,9 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1>Thank you for registering your new account!</h1>
+				<h1>Çılgın grubumuza hoşgeldiniz !</h1>
 			</div>
-			<p>You have successfully register. Please check your email inbox to confirm your email address.</p>
+			<p>Başarıyla üye oldunuz. <a href="<?php echo base_url('user/login'); ?>">Buradan</a> giriş yapın ve onaylandığında aşırı gizli muhteşem panelimize erişim sağlayabileceksiniz :)</p>
 		</div>
 	</div><!-- .row -->
 </div><!-- .container -->

@@ -3,9 +3,9 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1>Login success!</h1>
+				<h1>Giriş Başarılı</h1>
 			</div>
-			<p>You are now logged in.</p>
+			<p>Başarıyla giriş yaptınız.</p>
 		</div>
 	</div><!-- .row -->
 </div><!-- .container -->

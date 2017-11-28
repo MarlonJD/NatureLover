@@ -21,27 +21,25 @@
 			</div>
 			<?= form_open() ?>
 				<div class="form-group">
-					<label for="username">Username</label>
-					<input type="text" class="form-control" id="username" name="username" placeholder="Enter a username">
-					<p class="help-block">At least 4 characters, letters or numbers only</p>
+					<label for="username">Kullanıcı Adı</label>
+					<input type="text" class="form-control" id="username" name="username" placeholder="Kullancı adınız">
+					<p class="help-block">En az 4 Karakter, Sadece harf ve sayılar</p>
 				</div>
 				<div class="form-group">
 					<label for="email">Email</label>
-					<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-					<p class="help-block">A valid email address</p>
+					<input type="email" class="form-control" id="email" name="email" placeholder="E-mail Adresiniz">
 				</div>
 				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" class="form-control" id="password" name="password" placeholder="Enter a password">
-					<p class="help-block">At least 6 characters</p>
+					<label for="password">Şifre</label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="Şifrenizi Giriniz">
+					<p class="help-block">En az 6 karakter</p>
 				</div>
 				<div class="form-group">
-					<label for="password_confirm">Confirm password</label>
-					<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirm your password">
-					<p class="help-block">Must match your password</p>
+					<label for="password_confirm">Şifre Doğrulaması</label>
+					<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Şifrenizi Onaylayın">
 				</div>
 				<div class="form-group">
-					<input type="submit" class="btn btn-default" value="Register">
+					<input type="submit" class="btn btn-default" value="Üyeliği tamamla">
 				</div>
 			</form>
 		</div>

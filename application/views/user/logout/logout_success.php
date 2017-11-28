@@ -3,9 +3,9 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1>Logout success!</h1>
+				<h1>Nereye gidiyorsun!</h1>
 			</div>
-			<p>You are now logged out.</p>
+			<p>Şimdi bizi böyle bırakıp gidiyorsun yani.</p>
 		</div>
 	</div><!-- .row -->
 </div><!-- .container -->
