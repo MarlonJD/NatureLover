@@ -17,7 +17,7 @@
 		<?php endif; ?>
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1>Register</h1>
+				<h1>Üye Olun</h1>
 			</div>
 			<?= form_open() ?>
 				<div class="form-group">
