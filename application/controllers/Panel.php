@@ -36,8 +36,8 @@ class Panel extends CI_Controller {
             redirect('panel/');
             }
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-            $this->load->view('Theme/header', ['title' => 'Dogaktif']);
-            $this->load->view('Panel/mainView');
+            $this->load->view('Theme/header', ['title' => 'Dogaktif | Profil Doldurma']);
+            $this->load->view('Panel/CreateView');
             $this->load->view('Theme/footer');
         } else {
 			redirect('user/login');

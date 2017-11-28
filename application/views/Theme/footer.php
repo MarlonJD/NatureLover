@@ -28,11 +28,15 @@
 
 	<!-- js -->
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-		<script type="text/javascript">
+ <!-- Compiled and minified JavaScript -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.1/js/materialize.min.js"></script>
+ <script src="https://unpkg.com/vue"></script>
+ <script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>
+  	<script type="text/javascript">
 		$(document).ready(function() {
-      $('.button-collapse').sideNav();
-      $('select').material_select();
+      $('.sidenav').sidenav();
+      $('select').select();
 		});
 		</script>
   </body>

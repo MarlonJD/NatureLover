@@ -54,7 +54,7 @@ class User extends CI_Controller {
 		if ($this->form_validation->run() === false) {
 			
 			// validation not ok, send validation errors to the view
-			$this->load->view('user/header');
+			$this->load->view('user/header', ['title' => 'Doğaktif | Üyelik']);
 			$this->load->view('user/register/register', $data);
 			$this->load->view('user/footer');
 			
@@ -68,7 +68,7 @@ class User extends CI_Controller {
 			if ($this->user_model->create_user($username, $email, $password)) {
 				
 				// user creation ok
-				$this->load->view('user/header');
+				$this->load->view('user/header', ['title' => 'Doğaktif | Üyelik']);
 				$this->load->view('user/register/register_success', $data);
 				$this->load->view('user/footer');
 				
@@ -78,7 +78,7 @@ class User extends CI_Controller {
 				$data->error = 'There was a problem creating your new account. Please try again.';
 				
 				// send error to the view
-				$this->load->view('user/header');
+				$this->load->view('user/header', ['title' => 'Doğaktif | Üyelik']);
 				$this->load->view('user/register/register', $data);
 				$this->load->view('user/footer');
 				
@@ -110,7 +110,7 @@ class User extends CI_Controller {
 		if ($this->form_validation->run() == false) {
 			
 			// validation not ok, send validation errors to the view
-			$this->load->view('user/header');
+			$this->load->view('user/header', ['title' => 'Doğaktif | Giriş Yap']);
 			$this->load->view('user/login/login');
 			$this->load->view('user/footer');
 			
@@ -142,7 +142,7 @@ class User extends CI_Controller {
 				$data->error = 'Wrong username or password.';
 				
 				// send error to the view
-				$this->load->view('user/header');
+				$this->load->view('user/header', ['title' => 'Doğaktif | Giriş Başarısız']);
 				$this->load->view('user/login/login', $data);
 				$this->load->view('user/footer');
 				
@@ -171,7 +171,7 @@ class User extends CI_Controller {
 			}
 			
 			// user logout ok
-			$this->load->view('user/header');
+			$this->load->view('user/header', ['title' => 'Doğaktif | Çıkış Yap']);
 			$this->load->view('user/logout/logout_success', $data);
 			$this->load->view('user/footer');
 			

@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Compiled and minified CSS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.1/css/materialize.min.css">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +14,6 @@
 	<meta name="author" content="Burak Karahan">
 	<!-- Burak Karahan Github: MarlonJD-->
 	<!-- css -->
-	<script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-	<script src="https://unpkg.com/vue"></script>
 	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 
 	<!--[if lt IE 9]>
@@ -26,30 +23,30 @@
 </head>
 <body>
 
-<nav class="light-blue lighten-1 " role="navigation">
-	<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Doğaktif</a>
-	<ul class="right hide-on-med-and-down">
-	<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
-		<?php if ($_SESSION['is_admin']  === true) { ?>
-		<li><a href="<?php echo base_url('admin/');?>">Admin</a></li>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="<?php echo base_url('');?>" class="brand-logo">Doğaktif</a>
+      <ul class="right hide-on-med-and-down">
+		<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
+			<?php if ($_SESSION['is_admin']  === true) { ?>
+			<li><a href="<?php echo base_url('admin/');?>">Admin</a></li>
+			<?php } ?>
+			<li><a href="<?php echo base_url('user/logout');?>">Çıkış Yap</a></li>
+		<?php } else { ?>
+			<li><a href="<?php echo base_url('user/login');?>">Giriş Yap</a></li>
+			<li><a href="<?php echo base_url('user/register');?>">Üye Ol</a></li>
 		<?php } ?>
-		<li><a href="<?php echo base_url('user/logout');?>">Çıkış Yap</a></li>
-	<?php } else { ?>
-		<li><a href="<?php echo base_url('user/login');?>">Giriş Yap</a></li>
-		<li><a href="<?php echo base_url('user/register');?>">Üye Ol</a></li>
-	<?php } ?>
-	</ul>
+	  </ul>
 
-	<ul id="nav-mobile" class="side-nav">
-	<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
-	<li><a href="<?php echo base_url('user/logout');?>"><div class="blue-text">Çıkış Yap</div></a></li>
-	<?php } else { ?>
-		<li><a href="<?php echo base_url('user/login');?>">Giriş Yap</a></li>
-		<li><a href="<?php echo base_url('user/register');?>">Üye Ol</a></li>
-	<?php } ?>
-	</ul>
-	<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>	
-	</div>
+      <ul id="nav-mobile" class="sidenav">
+		<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
+		<li><a href="<?php echo base_url('user/logout');?>"><div class="blue-text">Çıkış Yap</div></a></li>
+		<?php } else { ?>
+			<li><a href="<?php echo base_url('user/login');?>">Giriş Yap</a></li>
+			<li><a href="<?php echo base_url('user/register');?>">Üye Ol</a></li>
+		<?php } ?>
+	  </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger button-collapse"><i class="material-icons">menu</i></a>
+    </div>
 </nav>
 
 <style>
