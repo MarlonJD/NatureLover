@@ -14,7 +14,7 @@
                     </div>
                     <div class="input-field col s12 m4">
                         <input placeholder="Takma isminiz/Lakabınız nedir ?" id="nickName_input" name="nickName_input" type="text" class="validate">
-                        <label for="surName_input">Takma İsminiz</label>
+                        <label for="surName_input">Takma İsminiz (Var ise)</label>
                     </div>
                     <div class="input-field col s12 m4">
                         <input placeholder="Soyisminiz nedir ?" id="surName_input" name="surName_input" type="text" class="validate">

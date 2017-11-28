@@ -29,16 +29,25 @@ class Panel extends CI_Controller {
 	function fillProfile() 
     {
         $this->load->model('MainModel');
-        $this->load->helper('form');
+		$this->load->helper('form');
+		$userid = $_SESSION['user_id'];
+		$check = $this->MainModel->isThereProfile($userid);
         if($this->input->post('btn_create'))//formda sumbit tuşuna basıldığında çalışacak fonksiyon
             {  
             $this->MainModel->create_profile();  //yeni elemanı database eklemek için model dosyamızı çağırıyoruz
             redirect('panel/');
-            }
+			}
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-            $this->load->view('Theme/header', ['title' => 'Dogaktif | Profil Doldurma']);
-            $this->load->view('Panel/CreateView');
-            $this->load->view('Theme/footer');
+			if ($check === 0) {
+				$this->load->view('Theme/header', ['title' => 'Dogaktif | Profil Doldurma']);
+				$this->load->view('Panel/CreateView');
+				$this->load->view('Theme/footer');
+			} else {
+				$data['veri'] = $this->MainModel->getUserData($userid);
+				$this->load->view('Theme/header', ['title' => 'Doğaktif']);
+				$this->load->view('Panel/mainView', $data);
+				$this->load->view('Theme/footer');
+			}
         } else {
 			redirect('user/login');
         }    
