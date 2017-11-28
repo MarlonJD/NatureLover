@@ -2,18 +2,21 @@
     <h1 class="center">Hoşgeldin Doğasever,</h1>
     <h5 class="center">Bize biraz kendini anlatır mısın?</h5>
     <h6 class="center">Bu aşamada size "bunları neden istiyorsunuz ki?" diyeceğiniz sorular soracağız.</h6>
-
     <br />
     <div class="row">
-        <div class="z-depth-1 grey lighten-4 row" style="padding: 50px">
+        <div>
             <form class="col s12" method="post" accept-charset="utf-8">
                 <div class="row">
-                    <div class="input-field col s12 m6">
+                    <div class="input-field col s12 m4">
                         <input placeholder="İsminiz nedir ?" id="name_input" name="name_input" type="text" class="validate">
                         <input id="userid_input" name="userid_input" type="hidden" value="<?php echo $_SESSION['user_id']; ?>">
                         <label for="title">İsminiz</label>
                     </div>
-                    <div class="input-field col s12 m6">
+                    <div class="input-field col s12 m4">
+                        <input placeholder="Takma isminiz/Lakabınız nedir ?" id="nickName_input" name="nickName_input" type="text" class="validate">
+                        <label for="surName_input">Takma İsminiz</label>
+                    </div>
+                    <div class="input-field col s12 m4">
                         <input placeholder="Soyisminiz nedir ?" id="surName_input" name="surName_input" type="text" class="validate">
                         <label for="surName_input">Soy isminiz</label>
                     </div>
@@ -45,7 +48,7 @@
                     </div>
                     <div class="input-field col s12 m6">
                         <select id="camperLevel_input" name="camperLevel_input">
-                        <option value="" disabled selected>Kamçılık Seviyeniz ?</option>
+                        <option value="" disabled selected>Kampçılık Seviyeniz ?</option>
                             <option value="0">Daha önce hiç kamp yapmadım.</option>
                             <option value="1">Korkmuyor musunuz, ayı filan?</option>
                             <option value="2">Küçükken İzciydim</option>
@@ -72,15 +75,21 @@
                         <label for="uniDep_input">Bölümünüz</label>
                     </div>
 
-                    <div class="input-field col s12 m6">
+                    <div class="input-field col s12 m4">
                         <input placeholder="Referansınız var mı kimin başını yakalım?" id="ref_input" name="ref_input" type="text" class="validate">
                         <label for="ref_input">Referans</label>
                     </div>
 
-                    <div class="input-field col s12 m6">
+                    <div class="input-field col s12 m4">
                         <input placeholder="Whatsapp var mı burası kasıyor" id="phone_input" name="phone_input" type="text" class="validate">
                         <label for="phone_input">Telefon No</label>
                     </div>
+
+                    <div class="input-field col s12 m4">
+                        <input placeholder="Kötü haberi kime verelim ?" id="ePhone_input" name="ePhone_input" type="text" class="validate">
+                        <label for="phone_input">Acil durumlarda Telefon No</label>
+                    </div>
+
                 </div>
                 <div class="row">
                     <div class="col s12 m6">

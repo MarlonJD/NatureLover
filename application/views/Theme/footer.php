@@ -29,7 +29,7 @@
 	<!-- js -->
 
  <!-- Compiled and minified JavaScript -->
- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.1/js/materialize.min.js"></script>
  <script src="https://unpkg.com/vue"></script>
  <script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>

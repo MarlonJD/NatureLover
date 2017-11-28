@@ -23,6 +23,7 @@ class MainModel extends CI_Model
         $data = array(
        'userid'=>$this->input->post('userid_input'),
        'name'=>$this->input->post('name_input'),
+       'nickName'=>$this->input->post('nickName_input'),
        'surName'=>$this->input->post('surName_input'),
        'gender'=>$this->input->post('gender_input'),
        'paranoid'=>$this->input->post('paranoid_input'),
@@ -31,7 +32,8 @@ class MainModel extends CI_Model
        'isStudent'=>$this->input->post('isStudent_input'),
        'uniDep'=>$this->input->post('uniDep_input'),
        'ref'=>$this->input->post('ref_input'),
-       'phone'=>$this->input->post('phone_input')
+       'phone'=>$this->input->post('phone_input'),
+       'ePhone'=>$this->input->post('ePhone_input')
         );
         $this->db->insert('people',$data);
     }
