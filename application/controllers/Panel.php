@@ -6,7 +6,8 @@ class Panel extends CI_Controller {
 	public function index() // Read
 	{
 		$this->load->model('MainModel');
-        $this->load->helper('form');
+		$this->load->helper('form');
+		$this->load->helper('test');
 		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 					$userid = $_SESSION['user_id'];
 					$check = $this->MainModel->isThereProfile($userid);
