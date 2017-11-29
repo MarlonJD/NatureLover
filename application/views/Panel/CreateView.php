@@ -95,7 +95,7 @@
                     <div class="col s12 m6">
                         <h6>* T.C.Kimlik No, ilgili kurumdan izin alınırken gerektiğinden resmi kurumlara iletilmesi amacıyla kullanılmaktadır.</h6>
                         <h6>** Telefon No, iletişim amaçlıdır.</h6>
-                        <h6>*** T.C. Kimlik ve Telefon Numaranız SHA256 şifreleme algoritmasıyla korunmaktadır. Kimseyle paylaşılmamaktadır !</h6>
+                        <h6>*** T.C. Kimlik Numaranız AES256 şifreleme algoritmasıyla korunmaktadır. Şifrelenmiş şekilde depolanmaktadır. Kimseyle paylaşılmamaktadır. !</h6>
                     </div>
                     <div class="col s12 m6 left">
                         <button type='submit' name='btn_create' class='btn btn-large waves-effect' value="sent">Bilgilerimi Kapsülle</button>
