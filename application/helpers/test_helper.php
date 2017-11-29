@@ -43,6 +43,16 @@ function getConfirmUserByID($userid)
         }
 }
 
+function getNamebyID($id)
+{
+    $CI =& get_instance();
+    
+        $query = $CI->db->get_where('people',array('userid'=>$id));
+        foreach ($query->result() as $row)
+        {
+            echo $row->name,$row->nickName," ",$row->surName;
+        }
+}
 
 function parseToXML($htmlStr)
 {

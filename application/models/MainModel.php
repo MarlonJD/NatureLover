@@ -38,13 +38,6 @@ class MainModel extends CI_Model
         $this->db->insert('people',$data);
     }
 
-    /**
-	 * hash_password function.
-	 * 
-	 * @access private
-	 * @param mixed $password
-	 * @return string|bool could be a string on success, or bool false on failure
-	 */
 	private function hash_numbers($plaintext) {
 
         $password = '3sc3RLrpd17';
@@ -61,20 +54,30 @@ class MainModel extends CI_Model
 		return $encrypted;
 		
 	}
-	
-	/**
-	 * verify_password_hash function.
-	 * 
-	 * @access private
-	 * @param mixed $password
-	 * @param mixed $hash
-	 * @return bool
-	 */
-	private function verify_number_hash($password, $hash) {
-		
-		return password_verify($password, $hash);
-		
-	}
+
+
+    function getUserID($user)
+    {
+        $at = $this->db->get_where('users', array('username'=>$user));
+        $at2 = $at->result();
+        return $at2[0]->id;
+    }
+ 
+    function getUsers()
+    {
+        $at = $this->db->get_where('users', array('is_admin'=>'0'));;
+        return $at->result();
+    }
     
+    
+    function deleteUser($username)
+    {
+        if ($username == "marlonjd") { 
+            echo "Napıyon panpa o kadar da değil"; 
+        } else {
+            $query = "DELETE FROM users WHERE username = '$username'";
+            $result = $this->db->query($query);
+        }			
+    }
 }
 ?>
