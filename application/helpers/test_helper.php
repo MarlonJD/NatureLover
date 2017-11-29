@@ -92,6 +92,17 @@ function getUserNamebyID($id)
         }
 }
 
+function getConfirmationbyID($id)
+{
+            if ($id == 0) { 
+                echo "Onaylanmadı" ;
+            } elseif ($id == 1) {
+                echo "Hazırlık";
+            } elseif ($id == 2) {
+                echo "Ana Grup";
+            } 
+}
+
 function getAllUsers() //Toplam kullanıcı sayısı
 {
     $CI =& get_instance();

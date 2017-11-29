@@ -40,6 +40,9 @@
       <ul id="nav-mobile" class="sidenav">
 		<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
 		<li><a href="<?php echo base_url('user/logout');?>"><div class="blue-text">Çıkış Yap</div></a></li>
+		<?php if ($_SESSION['is_admin']  === true) { ?>
+			<li><a href="<?php echo base_url('admin/');?>">Admin</a></li>
+		<?php } ?>
 		<?php } else { ?>
 			<li><a href="<?php echo base_url('user/login');?>">Giriş Yap</a></li>
 			<li><a href="<?php echo base_url('user/register');?>">Üye Ol</a></li>
