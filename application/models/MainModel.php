@@ -79,5 +79,20 @@ class MainModel extends CI_Model
             $result = $this->db->query($query);
         }			
     }
+
+    function confirmUser($userid)
+    {   
+            $query = "UPDATE users SET is_confirmed = 1 WHERE id = $userid";
+            $result = $this->db->query($query);
+        		
+    }
+
+    function makeUpUser($userid)
+    {   
+            $query = "UPDATE users SET is_confirmed = 2 WHERE id = $userid";
+            $result = $this->db->query($query);
+        		
+    }
+
 }
 ?>

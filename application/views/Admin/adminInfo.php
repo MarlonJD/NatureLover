@@ -4,9 +4,9 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1>Kullanıcıyı silme işlemi başarıyla tamamlandı !</h1>
+				<h1><?php echo $info; ?> !</h1>
 			</div>
-			<p><a href="<?php echo base_url('admin'); ?>">Panele geri dön.</a></p>
+			<p><a href="<?php echo base_url('admin'); ?>">Panele dön.</a></p>
 		</div>
 	</div><!-- .row -->
 </div><!-- .container -->

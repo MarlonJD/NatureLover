@@ -18,9 +18,17 @@
 	<script src="https://unpkg.com/vue"></script>
 	<script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>
 	<style>
-		header, main, footer {
-			padding-left: 300px;
-		}
+		
+    header, main, footer {
+      padding-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+
     #dash_users_header{
       padding-left: 30px;
     }
@@ -31,18 +39,26 @@
 	<![endif]-->
 </head>
 <body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+				$('select').material_select();
+  			$('.button-collapse').sideNav();
+		});
+		</script>
 
-
-  <ul id="slide-out" class="side-nav fixed z-depth-2">
+	<ul id="slide-out" class="side-nav fixed">
     <li class="center no-padding">
         <div class="row">
             Doğaktif Admin Panel
         </div>
     </li>
-
     <li id="dash_dashboard"><a class="waves-effect" href="<?php echo base_url('Admin'); ?>"><b>Admin Anasayfa</b></a></li>
-    <li id="dash_mainpage"><a class="waves-effect" href="<?php echo base_url(''); ?>"><b>Site Anasayfa</b></a></li>
+		<li id="dash_mainpage"><a class="waves-effect" href="<?php echo base_url(''); ?>"><b>Site Anasayfa</b></a></li>
+		<li id="dash_mainpage"><a class="waves-effect" href="<?php echo base_url('Admin/users'); ?>"><b>Kullanıcılar</b></a></li>
     <li id="dash_logout"><a class="waves-effect" href="<?php echo base_url('User/Logout'); ?>"><b>Çıkış Yap</b></a></li>
     
-
   </ul>
+	<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
