@@ -94,5 +94,21 @@ class MainModel extends CI_Model
         		
     }
 
+    function create_event() //Etkinlik Oluşturma Fonksiyonu
+    {
+        $data = array(
+       'name'=>$this->input->post('name_input'),
+       'permaId'=>$this->input->post('permaId_input'),
+       'owner'=>$this->input->post('owner_input'),
+       'place'=>$this->input->post('place_input'),
+       'date'=>$this->input->post('date_input'),
+       'date2'=>$this->input->post('date2_input'),
+       'type'=>$this->input->post('type_input'),
+       'subType'=>$this->input->post('subType_input'),
+       'shortDetail'=>$this->input->post('shortDetail_input')
+        );
+        $this->db->insert('events',$data);
+    }
+
 }
 ?>

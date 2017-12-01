@@ -223,5 +223,33 @@ class Admin extends CI_Controller {
 
 	}
 
+	public function addEvent() // Etkinlikler
+	{
+		$this->load->helper('url');
+		$this->load->model('MainModel');
+		$this->load->helper('test');
+		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+			if ($_SESSION['is_admin']  === true) {
+
+				if($this->input->post('btn_create'))//formda sumbit tuşuna basıldığında çalışacak fonksiyon
+				{  
+				$this->MainModel->create_event();  //yeni elemanı database eklemek için model dosyamızı çağırıyoruz
+					$this->load->view('Theme/adminHeader', ['title' => 'Doğaktif Admin']);
+					$this->load->view('Admin/adminInfo', ['info' => 'Etkinlik Oluşturuldu.']);
+					$this->load->view('Theme/adminFooter');
+				} else {
+				
+				$this->load->view('Theme/adminHeader', ['title' => 'Doğaktif Admin']);
+				$this->load->view('Admin/adminAddEvent');
+				$this->load->view('Theme/adminFooter');
+				} 
+			} else {
+				redirect('user/login');
+			}
+		} else {
+			redirect('user/login');
+        }
+	}
+
 
 }

@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.1/css/materialize.min.css">
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,17 +19,9 @@
 	<script src="https://unpkg.com/vue"></script>
 	<script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>
 	<style>
-		
-    header, main, footer {
-      padding-left: 300px;
-    }
-
-    @media only screen and (max-width : 992px) {
-      header, main, footer {
-        padding-left: 0;
-      }
-    }
-
+		nav, footer{
+			font-family: 'Bangers', cursive;
+		}
     #dash_users_header{
       padding-left: 30px;
     }
@@ -40,25 +33,47 @@
 </head>
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.1/js/materialize.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
 		<script type="text/javascript">
+
 		$(document).ready(function() {
-				$('select').material_select();
-  			$('.button-collapse').sideNav();
+				$('select').select();
+  			$('.sidenav').sidenav();
+				$('.datepicker').datepicker({formatSubmit: 'yyyy/mm/dd', format: 'YYYY-MM-DD', showDaysInNextAndPreviousMonths: true});
+				$(".dropdown-trigger").dropdown();
 		});
 		</script>
 
-	<ul id="slide-out" class="side-nav fixed">
-    <li class="center no-padding">
-        <div class="row">
-            Doğaktif Admin Panel
-        </div>
-    </li>
-    <li id="dash_dashboard"><a class="waves-effect" href="<?php echo base_url('Admin'); ?>"><b>Admin Anasayfa</b></a></li>
-		<li id="dash_mainpage"><a class="waves-effect" href="<?php echo base_url(''); ?>"><b>Site Anasayfa</b></a></li>
-		<li id="dash_mainpage"><a class="waves-effect" href="<?php echo base_url('Admin/users'); ?>"><b>Kullanıcılar</b></a></li>
-    <li id="dash_logout"><a class="waves-effect" href="<?php echo base_url('User/Logout'); ?>"><b>Çıkış Yap</b></a></li>
-    
-  </ul>
-	<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="<?php echo base_url('Admin/addEvent'); ?>">Etkinlik Ekle</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+
+<nav class="nav-extended blue">
+	<div class="nav-wrapper">
+		<a href="#" class="brand-logo">Doğaktif Admin</a>
+		<a href="#" data-target="mobile-demo" class="sidenav-trigger button-collapse"><i class="material-icons">menu</i></a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down"> <!--Web-->
+			<li><a href="<?php echo base_url('Admin'); ?>">Admin Anasayfa</a></li>
+			<li><a href="<?php echo base_url(''); ?>">Site Anasayfa</a></li>
+			<li><a href="<?php echo base_url('Admin/users'); ?>">Kullanıcılar</a></li>
+			<!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Etkinlikler<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a href="<?php echo base_url('User/Logout'); ?>">Çıkış Yap</a></li>
+		</ul>
+		<ul class="sidenav" id="mobile-demo"> <!--Mobil-->
+		<li><a href="<?php echo base_url('Admin'); ?>">Admin Anasayfa</a></li>
+		<li><a href="<?php echo base_url(''); ?>">Site Anasayfa</a></li>
+		<li><a href="<?php echo base_url('Admin/users'); ?>">Kullanıcılar</a></li>
+			<li><div class="divider"></div></li>
+			<li><a class="subheader">Etkinlikler</a></li>
+    	<li><a class="waves-effect" href="<?php echo base_url('Admin/addEvent'); ?>">Etkinlik Ekle</a></li>
+			<li><div class="divider"></div></li>
+			<li><a href="<?php echo base_url('User/Logout'); ?>">Çıkış Yap</a></li>
+		</ul>
+	</div> 
+</nav>

@@ -19,7 +19,7 @@
     </div>
     <div class="footer-copyright light-blue lighten-1">
       <div class="container">
-      Kodlama ve Tasarım <a class="orange-text text-lighten-3" href="http://www.mburakkarahan.com">Burak Karahan</a>
+      Doğaktif 0.37 Beta, Kodlama ve Tasarım <a class="orange-text text-lighten-3" href="http://www.mburakkarahan.com">Burak Karahan</a>
       </div>
     </div>
   </footer>
