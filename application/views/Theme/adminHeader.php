@@ -54,7 +54,7 @@
 </ul>
 
 <nav class="nav-extended blue">
-	<div class="nav-wrapper">
+	<div class="nav-wrapper container">
 		<a href="#" class="brand-logo">Doğaktif Admin</a>
 		<a href="#" data-target="mobile-demo" class="sidenav-trigger button-collapse"><i class="material-icons">menu</i></a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down"> <!--Web-->
