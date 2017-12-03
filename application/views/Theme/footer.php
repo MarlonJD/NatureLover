@@ -6,10 +6,10 @@
         <div class="col l6 s12 center">
           <h5 class="black-text">Doğaktif</h5>
           <p class="black-text text-lighten-4">
-          Doğaya Dair Her Şey<br />
-          Tüm hakları saklıdır. <br />
-          Kar amacı gütmeyen bir topluluktur. <br />
-          Karabük/Türkiye <br />        
+          DOĞAYA DAİR HERŞEY <br />
+          TÜM HAKLARI SAKLIDIR. <br />
+          KAR AMACI GÜTMEYEN BİR TOPLULUKTUR. <br />
+          KARABÜK/TÜRKİYE <br />        
         </p>
         </div>
         <div class="col l6 s12 center">

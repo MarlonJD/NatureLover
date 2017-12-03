@@ -22,8 +22,9 @@
 	<script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>
   	<script type="text/javascript">
 		$(document).ready(function() {
-      $('.sidenav').sidenav();
-      $('select').select();
+			$('.sidenav').sidenav();
+			$('select').select();
+			$('.collapsible').collapsible();
 		});
 		</script>
 	<!--[if lt IE 9]>

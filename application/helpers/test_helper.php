@@ -59,6 +59,72 @@ function getCamperNameByID($id)
     }
 }
 
+function getTypeNameByID($id)
+{
+    switch ($id) {
+        case 0:
+            echo "Kamp";
+            break;
+        case 1:
+            echo "Özel Etkinlik";
+            break;
+        case 2:
+            echo "Açık Etkinlik";
+            break;
+    }
+}
+
+function getSubTypeNameByID($id)
+{
+    switch ($id) {
+        case 0:
+            echo "Planlı Kamp";
+            break;
+        case 1:
+            echo "Özel Amaçlı Kamp";
+            break;
+        case 2:
+            echo "Temalı Kamp";
+            break;
+        case 3:
+            echo "Kış Kampı";
+            break;
+        case 4:
+            echo "İnterrail Kampı";
+            break;
+
+        case 10:
+            echo "Trekking (Kamplı Doğa Yürüyüşü)";
+            break;
+        case 11:
+            echo "Hiking (Günübirlik Doğa Yürüyüşü)";
+            break;
+        case 12:
+            echo "Tırmanış";
+            break;  
+        case 13:
+            echo "Eğitim";
+            break;
+        case 14:
+            echo "İnterrail Etkinliği";
+            break;
+        case 15:
+            echo "Grup Toplantısı";
+            break;
+            
+        case 20:
+            echo "Türkiye Geneli Kamp";
+            break;
+        case 21:
+            echo "Bölge Geneli Kamp";
+            break;
+        case 22:
+            echo "Şehir Geneli Kamp<";
+            break;
+        
+    }
+}
+
 function getConfirmUserByID($userid)
 {
     $CI =& get_instance();

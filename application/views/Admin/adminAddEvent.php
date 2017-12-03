@@ -60,7 +60,7 @@
                             <option value="1">Özel Amaçlı Kamp</option>
                             <option value="2">Temalı Kamp</option>
                             <option value="3">Kış Kampı</option>
-                            <option value="3">İnterrail Kampı</option>
+                            <option value="4">İnterrail Kampı</option>
                         </optgroup>
                         <optgroup label="Özel Etkinlik">
                             <option value="10">Trekking (Kamplı Doğa Yürüyüşü)</option>
@@ -73,7 +73,7 @@
                         <optgroup label="Açık Etkinlik">
                             <option value="20">Türkiye Geneli Kamp</option>
                             <option value="21">Bölge Geneli Kamp</option>
-                            <option value="21">Şehir Geneli Kamp</option>
+                            <option value="22">Şehir Geneli Kamp</option>
                         </optgroup>
                         </select>
                         <label>Alt Tür</label>
