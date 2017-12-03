@@ -1,7 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
 	  	<?php if ($_GET['a'] == 0 ) { ?>
-				  M.toast({html: 'Zaten kayıtlısın, bazen abartmıyo musun?!', classes: 'rounded'});
+				  M.toast({html: 'Zaten kayıtlısın, bazen abartmıyo musun?!', classes: 'rounded', displayLength: 3000});
+          M.toast({html: 'Zaten kayıtlısın, bazen abartmıyo musun?!', classes: 'rounded', displayLength: 4000});
+          M.toast({html: '??!', classes: 'rounded', displayLength: 5000});
+          M.toast({html: '?!', classes: 'rounded', displayLength: 4000});
+
 			<?php } elseif ($_GET['a'] == 1) { ?>
           M.toast({html: 'Kaydını aldık, ponçik. Biz seni ararız', classes: 'rounded'});
       <?php } ?>

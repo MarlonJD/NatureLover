@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-        *Butonlar çalışmıyor boşuna deneme bende insanım hepsi bi anda olmuyor yavaş yavaş xDé
+        *Göz olan buton çalışmıyor gözü çıkmış ehuehuehue xDé
     </div>
 </main>
 

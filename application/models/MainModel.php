@@ -99,6 +99,16 @@ class MainModel extends CI_Model
         }			
     }
 
+    function deleteProfile($userid)
+    {
+        if ($userid == 6) { 
+            echo "Cık onuda silemezsin xP"; 
+        } else {
+            $query = "DELETE FROM people WHERE userid = '$userid'";
+            $result = $this->db->query($query);
+        }			
+    }
+
     function confirmUser($userid)
     {   
             $query = "UPDATE users SET is_confirmed = 1 WHERE id = $userid";

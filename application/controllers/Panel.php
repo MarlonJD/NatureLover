@@ -70,7 +70,6 @@ class Panel extends CI_Controller {
 					$eventID = $this->MainModel->getEventIDbyName($eventName);
 					$kontrol = $this->MainModel->checkParticipate($userid,$eventID);
 					if (!$kontrol == 0) { 
-						echo "Zaten bi kere yolladın sende abartıyon ama";
 						redirect('panel/?a=0'); 
 					} else {
 						$status = $this->MainModel->createParticipate($userid, $eventID);
