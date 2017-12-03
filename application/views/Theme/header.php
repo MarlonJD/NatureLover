@@ -12,6 +12,8 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Burak Karahan">
+	<meta name="theme-color" content="#29b6f6">
+	<link rel="icon" sizes="192x192" href="<?php echo base_url('assets/img/logoFavicon.png'); ?>" type="image/png">
 	<!-- Burak Karahan Github: MarlonJD-->
 	<!-- css -->
 	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
