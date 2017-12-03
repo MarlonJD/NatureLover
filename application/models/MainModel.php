@@ -77,7 +77,8 @@ class MainModel extends CI_Model
 
     function getEvents()
     {
-        $at = $this->db->get_where('events', array('status'=>'0'));
+        $at = $this->db->order_by("date", "desc")
+                        ->get_where('events', array('status'=>'0'));
         return $at->result();
     }
     
