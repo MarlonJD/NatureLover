@@ -48,9 +48,7 @@
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
   <li><a href="<?php echo base_url('Admin/addEvent'); ?>">Etkinlik Ekle</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
+  <li><a href="<?php echo base_url('Admin/events'); ?>">Düzenle</a></li>
 </ul>
 
 <nav class="nav-extended blue">
@@ -72,6 +70,7 @@
 			<li><div class="divider"></div></li>
 			<li><a class="subheader">Etkinlikler</a></li>
     	<li><a class="waves-effect" href="<?php echo base_url('Admin/addEvent'); ?>">Etkinlik Ekle</a></li>
+			<li><a class="waves-effect" href="<?php echo base_url('Admin/events'); ?>">Düzenle</a></li>
 			<li><div class="divider"></div></li>
 			<li><a href="<?php echo base_url('User/Logout'); ?>">Çıkış Yap</a></li>
 		</ul>

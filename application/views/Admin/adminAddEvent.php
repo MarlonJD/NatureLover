@@ -68,6 +68,7 @@
                             <option value="12">Tırmanış</option>
                             <option value="13">Eğitim</option>
                             <option value="14">İnterrail Etkinliği</option>
+                            <option value="15">Grup Toplantısı</option>
                         </optgroup>
                         <optgroup label="Açık Etkinlik">
                             <option value="20">Türkiye Geneli Kamp</option>

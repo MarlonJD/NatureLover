@@ -15,6 +15,7 @@ class Panel extends CI_Controller {
 					redirect("panel/fillProfile");
 				} else {
 					$data['veri'] = $this->MainModel->getUserData($userid);
+					$data['etkinlikler'] = $this->MainModel->getEvents();
 					$this->load->view('Theme/header', ['title' => 'Doğaktif']);
 					$this->load->view('Panel/mainView', $data);
 					$this->load->view('Theme/footer');

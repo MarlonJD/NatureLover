@@ -65,10 +65,21 @@ class MainModel extends CI_Model
  
     function getUsers()
     {
-        $at = $this->db->get_where('users', array('is_admin'=>'0'));;
+        $at = $this->db->get_where('users', array('is_admin'=>'0'));
         return $at->result();
     }
     
+    function getEventsA()
+    {
+        $at = $this->db->get_where('events');
+        return $at->result();
+    }
+
+    function getEvents()
+    {
+        $at = $this->db->get_where('events', array('status'=>'0'));
+        return $at->result();
+    }
     
     function deleteUser($username)
     {

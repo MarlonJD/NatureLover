@@ -35,7 +35,6 @@ class Admin extends CI_Controller {
 			if ($_SESSION['is_admin']  === true) {
 
 				$data['uyeler'] = $this->MainModel->getUsers();
-
 				$this->load->view('Theme/adminHeader', ['title' => 'Doğaktif Admin Paneli']);
 				$this->load->view('Admin/adminUsersView', $data);
 				$this->load->view('Theme/adminFooter');
@@ -223,7 +222,28 @@ class Admin extends CI_Controller {
 
 	}
 
-	public function addEvent() // Etkinlikler
+
+	public function events() // Etkinlikler
+	{
+		$this->load->helper('url');
+		$this->load->model('MainModel');
+		$this->load->helper('test');
+		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+			if ($_SESSION['is_admin']  === true) {
+				$data['etkinlikler'] = $this->MainModel->getEventsA();
+				$this->load->view('Theme/adminHeader', ['title' => 'Doğaktif Admin']);
+				$this->load->view('Admin/adminEvents', $data);
+				$this->load->view('Theme/adminFooter'); 
+			} else {
+				redirect('user/login');
+			}
+		} else {
+			redirect('user/login');
+        }
+	}
+
+	
+	public function addEvent() // Etkinlik Ekleme
 	{
 		$this->load->helper('url');
 		$this->load->model('MainModel');
