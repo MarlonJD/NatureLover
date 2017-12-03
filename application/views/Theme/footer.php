@@ -1,5 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-
+<script>
+	  	<?php if ($_GET['a'] == 0 ) { ?>
+				  M.toast({html: 'Zaten kayıtlısın, bazen abartmıyo musun?!', classes: 'rounded'});
+			<?php } elseif ($_GET['a'] == 1) { ?>
+          M.toast({html: 'Kaydını aldık, ponçik. Biz seni ararız', classes: 'rounded'});
+      <?php } ?>
+</script>
 <footer class="page-footer white">
     <div class="container">
       <div class="row">

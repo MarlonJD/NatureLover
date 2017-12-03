@@ -27,6 +27,8 @@
 			$('.sidenav').sidenav();
 			$('select').select();
 			$('.collapsible').collapsible();
+			$('.modal').modal();
+			
 		});
 		</script>
 	<!--[if lt IE 9]>

@@ -69,10 +69,17 @@ class MainModel extends CI_Model
         return $at->result();
     }
     
-    function getEventsA()
+    function getEventsA() //Admin
     {
         $at = $this->db->get_where('events');
         return $at->result();
+    }
+
+    function getEventIDbyName($name)
+    {
+        $at = $this->db->get_where('events', array('permaId'=>$name));
+        $at2 = $at->result();
+        return $at2[0]->id;
     }
 
     function getEvents()
@@ -120,6 +127,20 @@ class MainModel extends CI_Model
        'shortDetail'=>$this->input->post('shortDetail_input')
         );
         $this->db->insert('events',$data);
+    }
+
+    function checkParticipate($userid, $eventID)
+    {
+        $at = $this->db->get_where('participants', array('userID'=>$userid, 'eventID'=>$eventID));
+        return $at->num_rows(); 
+    }
+
+    function createParticipate($userid, $eventID) {
+        $data = array(
+            'userID'=>$userid,
+            'eventID'=>$eventID
+             );
+             $this->db->insert('participants',$data);
     }
 
 }

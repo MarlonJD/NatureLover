@@ -53,6 +53,36 @@ class Panel extends CI_Controller {
         } else {
 			redirect('user/login');
         }    
-    }
+	}
+	
+	public function join($eventName) // Read
+	{
+		$this->load->model('MainModel');
+		$this->load->helper('form');
+		$this->load->helper('test');
+		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+					$userid = $_SESSION['user_id'];
+					$check = $this->MainModel->isThereProfile($userid);
+				if ($check === 0) {
+					redirect("panel/fillProfile");
+				} else {
+					$data['veri'] = $this->MainModel->getUserData($userid);
+					$eventID = $this->MainModel->getEventIDbyName($eventName);
+					$kontrol = $this->MainModel->checkParticipate($userid,$eventID);
+					if (!$kontrol == 0) { 
+						echo "Zaten bi kere yolladın sende abartıyon ama";
+						redirect('panel/?a=0'); 
+					} else {
+						$status = $this->MainModel->createParticipate($userid, $eventID);
+						redirect('panel/?a=1');
+					}
+				}
+		} else {
+			$this->load->view('Theme/header', ['title' => 'Doğaktif']);
+			$this->load->view('Main/mainView');
+			$this->load->view('Theme/footer');
+        }
+		
+	}
 
 }
