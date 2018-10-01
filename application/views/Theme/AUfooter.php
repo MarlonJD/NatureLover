@@ -32,7 +32,7 @@
 
 	<!-- js -->
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function() {
 				$('select').material_select();
