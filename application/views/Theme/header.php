@@ -12,7 +12,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Burak Karahan">
-	<meta name="theme-color" content="#29b6f6">
+	<meta name="theme-color" content="#9ccc65">
 	<link rel="icon" sizes="192x192" href="<?php echo base_url('assets/img/logoFavicon.png'); ?>" type="image/png">
 	<!-- Burak Karahan Github: MarlonJD-->
 	<!-- css -->
@@ -38,15 +38,21 @@
 </head>
 <body>
 
-<nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="<?php echo base_url('');?>" class="brand-logo">Doğaktif</a>
+<nav class="light-green lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="<?php echo base_url();?>" class="brand-logo">Doğaktif</a>
       <ul class="right hide-on-med-and-down">
 		<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
 			<?php if ($_SESSION['is_admin']  === true) { ?>
 			<li><a href="<?php echo base_url('admin/');?>">Admin</a></li>
 			<?php } ?>
+			<li><a href="<?php echo base_url('panel/FAQ');?>">SSS</a></li>
+			<li><a href="<?php echo base_url('panel/About');?>">Hakkımızda</a></li>
+			<li><a href="<?php echo base_url('panel/Contact');?>">İletişim</a></li>
 			<li><a href="<?php echo base_url('user/logout');?>">Çıkış Yap</a></li>
 		<?php } else { ?>
+			<li><a href="<?php echo base_url('panel/FAQ');?>">SSS</a></li>
+			<li><a href="<?php echo base_url('panel/About');?>">Hakkımızda</a></li>
+			<li><a href="<?php echo base_url('panel/Contact');?>">İletişim</a></li>
 			<li><a href="<?php echo base_url('user/login');?>">Giriş Yap</a></li>
 			<li><a href="<?php echo base_url('user/register');?>">Üye Ol</a></li>
 		<?php } ?>
@@ -58,7 +64,13 @@
 		<?php if ($_SESSION['is_admin']  === true) { ?>
 			<li><a href="<?php echo base_url('admin/');?>">Admin</a></li>
 		<?php } ?>
+			<li><a href="<?php echo base_url('panel/FAQ');?>">SSS</a></li>
+			<li><a href="<?php echo base_url('panel/About');?>">Hakkımızda</a></li>
+			<li><a href="<?php echo base_url('panel/Contact');?>">İletişim</a></li>
 		<?php } else { ?>
+			<li><a href="<?php echo base_url('panel/FAQ');?>">SSS</a></li>
+			<li><a href="<?php echo base_url('panel/About');?>">Hakkımızda</a></li>
+			<li><a href="<?php echo base_url('panel/Contact');?>">İletişim</a></li>
 			<li><a href="<?php echo base_url('user/login');?>">Giriş Yap</a></li>
 			<li><a href="<?php echo base_url('user/register');?>">Üye Ol</a></li>
 		<?php } ?>

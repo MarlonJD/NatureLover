@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright light-blue lighten-1">
+    <div class="footer-copyright light-green lighten-1">
       <div class="container">
       Kodlama ve Tasarım <a class="orange-text text-lighten-3" href="http://www.mburakkarahan.com">Burak Karahan</a>
       </div>

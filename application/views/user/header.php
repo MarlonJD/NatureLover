@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<nav class="light-blue lighten-1" role="navigation">
+<nav class="light-green lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="<?php echo base_url('');?>" class="brand-logo">Doğaktif</a>
       <ul class="right hide-on-med-and-down">
 		<?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
