@@ -82,6 +82,18 @@ class MainModel extends CI_Model
         return $at2[0]->id;
     }
 
+    function getEventbyID($id)
+    {
+        $at = $this->db->get_where('events', array('id'=>$id));
+        return $at->result();
+    }
+
+    function getPeoplebyEventID($id)
+{
+        $at = $this->db->get_where('participants',array('eventID'=>$id));
+        return $at->result();
+}
+
     function getEvents()
     {
         $at = $this->db->order_by("date", "desc")

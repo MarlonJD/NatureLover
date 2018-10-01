@@ -142,8 +142,13 @@ function getNamebyID($id)
     
         $query = $CI->db->get_where('people',array('userid'=>$id));
         foreach ($query->result() as $row)
+        if (empty($row->nickName))
         {
             echo $row->name,' ',$row->nickName,' ',$row->surName;
+        }
+        else
+        {
+            echo $row->name,' "',$row->nickName,'" ',$row->surName;
         }
 }
 
@@ -156,6 +161,14 @@ function getUserNamebyID($id)
         {
             echo $row->username;
         }
+}
+
+function getPpbyID($id)
+{
+    $CI =& get_instance();
+    
+        $query = $CI->db->get_where('participants',array('eventID'=>$id));
+        return $query->num_rows();
 }
 
 function getConfirmationbyID($id)

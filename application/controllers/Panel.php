@@ -84,4 +84,31 @@ class Panel extends CI_Controller {
 		
 	}
 
+	public function event($eventName) // Read
+	{
+		$this->load->model('MainModel');
+		$this->load->helper('form');
+		$this->load->helper('test');
+		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+					$userid = $_SESSION['user_id'];
+					$check = $this->MainModel->isThereProfile($userid);
+				if ($check === 0) {
+					redirect("panel/fillProfile");
+				} else {
+					$data['veri'] = $this->MainModel->getUserData($userid);
+					$eventID = $this->MainModel->getEventIDbyName($eventName);
+					$data['etkinlik'] = $this->MainModel->getEventbyID($eventID);
+					$data['katilimcilar'] = $this->MainModel->getPeoplebyEventID($eventID);
+					$this->load->view('Theme/header', ['title' => 'Doğaktif']);
+					$this->load->view('Panel/eventView', $data);
+					$this->load->view('Theme/footer');
+				}
+		} else {
+			$this->load->view('Theme/header', ['title' => 'Doğaktif']);
+			$this->load->view('Main/mainView');
+			$this->load->view('Theme/footer');
+        }
+		
+	}
+
 }

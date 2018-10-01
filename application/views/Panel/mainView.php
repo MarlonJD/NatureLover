@@ -18,12 +18,15 @@
                                     <span><h6>{{ backup.shortDetail }}</h6></br><b>Yer:</b> {{ backup.place}}</br>
                                     <b>Tarih:</b> {{ backup.date}} {{ backup.date2}}</br>
                                     <b>Tür</b>: {{ backup.type}} - {{ backup.subType}}</br>
+                                    <b>Katılımcı Sayısı</b>: {{ backup.numberOfP}}</br>
                                         <div class="card-action">
                                         <?php $sayi = rand(); ?>
-                                            <a href="#">
+                                            <a :href="'<?php echo base_url('panel/event/'); ?>' + backup.permaId">
                                                     <i class="fa fa-eye fa-2x right" aria-hidden="true"></i>
                                             </a>            
-                                            <a :href="'<?php echo base_url('panel/join/'); ?>' + backup.permaId"><i class="fa fa-plus fa-2x right" aria-hidden="true"></i></a>
+                                            <a :href="'<?php echo base_url('panel/join/'); ?>' + backup.permaId">
+                                                <i class="fa fa-plus fa-2x right" aria-hidden="true"></i>
+                                            </a>
                                     </span>
                                         
                                 </div>
@@ -33,7 +36,7 @@
                     </div>
                 </div>
             </div>
-        *Göz olan buton çalışmıyor gözü çıkmış ehuehuehue xDé
+        *Şuanda ekranda görünüpte çalışmayan bi şey yok sanırım galiba bilmiyorum kontrol etmedim.
     </div>
 </main>
 
@@ -47,7 +50,7 @@
                 search :"",
                 gridData : [
                     <?php foreach($etkinlikler as $row){ ?>
-                    {name : '<?php echo $row->name; ?>',permaId: '<?php echo $row->permaId; ?>' ,shortDetail: "<?php echo $row->shortDetail; ?>", place : '<?php echo $row->place; ?>',date : '<?php echo date_tr('j F Y, l', $row->date); ?>',date2 : '<?php if (!($row->date2 == "0000-00-00")) { echo "- ",date_tr('j F Y, l', $row->date2); } ?>',udate: '<?php echo date_tr('j F Y', $row->date); ?>', type: '<?php getTypeNameByID($row->type); ?>',subType: '<?php getSubTypeNameByID($row->subType); ?>' , action : 'edit'},
+                    {name : '<?php echo $row->name; ?>',permaId: '<?php echo $row->permaId; ?>' ,shortDetail: "<?php echo $row->shortDetail; ?>", place : '<?php echo $row->place; ?>',date : '<?php echo date_tr('j F Y, l', $row->date); ?>',date2 : '<?php if (!($row->date2 == "0000-00-00")) { echo "- ",date_tr('j F Y, l', $row->date2); } ?>',udate: '<?php echo date_tr('j F Y', $row->date); ?>', type: '<?php getTypeNameByID($row->type); ?>',subType: '<?php getSubTypeNameByID($row->subType); ?>' , action : 'edit', numberOfP : '<?php echo getPpbyID($row->id); ?>'},
                     <?php } ?>
                 ]};
         },
