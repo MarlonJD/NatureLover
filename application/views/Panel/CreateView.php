@@ -23,7 +23,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <select id="gender_input" name="gender_input" required>>
+                        <select id="gender_input" name="gender_input" required>
                             <option value="" disabled selected>Cinsiyetiniz Nedir ?</option>
                             <option value="0">Kadın</option>
                             <option value="1">Erkek</option>
@@ -31,7 +31,7 @@
                         <label>Cinsiyetiniz</label>
                     </div>
                     <div class="input-field col s12 m6">
-                        <select id="paranoid_input" name="paranoid_input" required>>
+                        <select id="paranoid_input" name="paranoid_input" required>
                         <option value="" disabled selected>Paranoyaklık Seviyeniz?</option>
                             <option value="0">Nereden bileyim kredi çekmeyeceğinizi?</option>
                             <option value="1">Veriyim de herkesle paylaşmayın</option>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <select id="isStudent_input" name="isStudent_input" required>>
+                        <select id="isStudent_input" name="isStudent_input" required>
                         <option value="" disabled selected>Öğrenci misiniz ?</option>
                             <option value="0">Okumuyom Ben</option>
                             <option value="1">Okuyoruz bi şeyler</option>
