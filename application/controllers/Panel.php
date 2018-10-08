@@ -58,6 +58,7 @@ class Panel extends CI_Controller {
 		$this->load->model('MainModel');
 		$this->load->helper('form');
 		$this->load->helper('test');
+
 		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 					$userid = $_SESSION['user_id'];
 					$check = $this->MainModel->isThereProfile($userid);
@@ -74,9 +75,37 @@ class Panel extends CI_Controller {
 			$this->load->view('Theme/header', ['title' => 'Doğaktif']);
 			$this->load->view('Main/faqView');
 			$this->load->view('Theme/footer');
-        }
-		
+		}
+
 	}
+
+	public function Contact() // Read
+	{
+		$this->load->model('MainModel');
+		$this->load->helper('form');
+		$this->load->helper('test');
+
+		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+					$userid = $_SESSION['user_id'];
+					$check = $this->MainModel->isThereProfile($userid);
+				if ($check === 0) {
+					redirect("panel/fillProfile");
+				} else {
+					$data['veri'] = $this->MainModel->getUserData($userid);
+					$data['etkinlikler'] = $this->MainModel->getEvents();
+					$this->load->view('Theme/header', ['title' => 'Doğaktif']);
+					$this->load->view('Main/contactView', $data);
+					$this->load->view('Theme/footer');
+				}
+		} else {
+			$this->load->view('Theme/header', ['title' => 'Doğaktif']);
+			$this->load->view('Main/contactView');
+			$this->load->view('Theme/footer');
+		}
+
+	}
+
+
 
 	function fillProfile() 
     {

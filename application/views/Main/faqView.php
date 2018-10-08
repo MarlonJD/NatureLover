@@ -8,7 +8,7 @@
                     <ul class="collapsible">
                         <li class="active">
                             <div class="collapsible-header purple-text">Doğaktife nasıl dahil olabilirim?</div>
-                            <div class="collapsible-body"><span>İletişim sayfasından paylaştığımız instagram, facebook, twitter, telefon numarası ile ulaşabilir, bilgi alabilirsiniz tabi öncelikle buradaki soruları okursanız iyi olur :)</span></div>
+                            <div class="collapsible-body"><span>İletişim sayfasından paylaştığımız  <a target="_blank" href="https://www.instagram.com/dogaktif/">Instagram</a>, <a target="_blank" href="https://www.facebook.com/dogailekalin/">Facebook</a>, <a target="_blank" href="https://www.twitter.com/dogaktif/">Twitter</a>, <a target="_blank" href="whatsapp://send?phone=905415947748">Whatsapp</a> ile ulaşabilir, bilgi alabilirsiniz tabi öncelikle buradaki soruları okursanız iyi olur :)</span></div>
                         </li>
                         <li>
                             <div class="collapsible-header purple-text">Topluluğa katılım şartları nelerdir?</div>
