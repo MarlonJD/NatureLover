@@ -38,6 +38,7 @@
 		<script type="text/javascript">
 
 		$(document).ready(function() {
+    		$('select').formSelect();
 				$('select').select();
   			$('.sidenav').sidenav();
 				$('.datepicker').datepicker({formatSubmit: 'yyyy/mm/dd', format: 'YYYY-MM-DD', showDaysInNextAndPreviousMonths: true});
